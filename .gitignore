@@ -1,5 +1,6 @@
 env/
 .pytest_cache/
 __pycache__/
+vcr_cassettes/
 *private.sh
 .DS_Store
