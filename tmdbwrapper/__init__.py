@@ -1,6 +1,5 @@
 import os
 import requests
-from .tv import TV
 
 TMDB_API_KEY = os.environ.get("TMDB_API_KEY", None)
 
@@ -18,3 +17,5 @@ if TMDB_API_KEY is None:
 session = requests.Session()
 session.params = {}
 session.params["api_key"] = TMDB_API_KEY
+
+from .tv import TV
