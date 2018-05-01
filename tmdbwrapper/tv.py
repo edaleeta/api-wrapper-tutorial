@@ -9,3 +9,9 @@ class TV(object):
         path = "https://api.themoviedb.org/3/tv/{}".format(self.id)
         response = session.get(path)
         return response.json()
+
+    @staticmethod
+    def popular():
+        path = "https://api.themoviedb.org/3/tv/popular"
+        response = session.get(path)
+        return response.json()
