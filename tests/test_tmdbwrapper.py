@@ -1,5 +1,6 @@
 from pytest import fixture
 from tmdbwrapper import TV
+import vcr
 
 
 @fixture
@@ -11,6 +12,7 @@ def tv_keys():
     return keys
 
 
+@vcr.use_cassette("tests/vcr_cassettes/tv-info.yml")
 def test_tv_info(tv_keys):
     """Tests an API call to get a TV show's info."""
 
